@@ -1,0 +1,535 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 20px;
+  background-color: #fff;
+  border-bottom: 2px solid red;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
+}
+
+.logo span {
+  color: black;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #e74c3c;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-bar {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.city-select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: black;
+}
+
+.sign-in-btn {
+  padding: 10px 15px;
+  background-color:red ;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+body{
+    background-color: rgb(252, 232, 232);
+}
+
+
+ /* slide function */
+.container{
+    margin: 100px 0 0 200px;
+    width: 70%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+ .container img{
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+    border: radius 10px;
+    transition:all ease-in-out 0.5s;
+}
+
+.container img:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.new{
+    text-decoration:none ;
+    color:red ;
+    display: flex;
+
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Fix movie heading */
+.new {
+  margin: 20px auto 10px;  /* top auto bottom */
+  text-align: center;
+}
+
+.explore-text {
+  margin-bottom: 10px;
+}
+
+/* jab remove kiya space and hover condition kmm ki */
+.container {
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  max-width: 90%;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.container img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+.container img:hover {
+  transform: scale(1.15);
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+}
+
+.video-banner {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* adjust size */
+  overflow: hidden;
+}
+
+.video-banner iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+/*movie section-*/
+/* removed the excess space */
+.movie-section {
+  margin: 60px auto;
+  max-width: 90%;
+}
+
+.movie-section h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: white;
+}
+
+.movie-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.movie-container::-webkit-scrollbar {
+  display: none; /* hide scrollbar */
+}
+
+.movie-card {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 200px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 16px rgba(0,0,0,0.5);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 10px;
+  text-align: left;
+}
+
+.movie-info h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.genre {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 5px;
+}
+
+.rating {
+  font-size: 13px;
+  color: #ff4c4c;
+}
+
+.rating span {
+  color: #ddd;
+  font-size: 12px;
+}
+
+
+
+/* Concert Section */
+/* same way as movie section */
+.concert-section {
+  margin: 40px 0;
+}
+
+.concert-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #fff; /* Change if you want */
+}
+
+.concert-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.concert-card {
+  background: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.concert-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.concert-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.concert-info {
+  padding: 12px;
+  color: #fff;
+}
+
+.concert-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.concert-info .genre {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.concert-info .rating {
+  font-size: 0.9rem;
+  margin-top: 6px;
+  color: #ffd700;
+}
+
+
+
+/* Stand-up Comedy Section */
+.comedy-section {
+  margin: 40px 0;
+}
+
+.comedy-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.comedy-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.comedy-card {
+  background: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comedy-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.comedy-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.comedy-info {
+  padding: 12px;
+  color: #fff;
+}
+
+.comedy-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+
+/* Theatre Section */
+.theatre-section {
+  margin: 40px 0;
+}
+
+.theatre-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.theatre-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.theatre-card {
+  background: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theatre-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.theatre-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.theatre-info {
+  padding: 12px;
+  color: #fff;
+}
+
+.theatre-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+
+/* Footer */
+.footer {
+  background: #111;
+  color: #ccc;
+  padding: 40px 20px 20px;
+  margin-top: 50px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer h3, .footer h4 {
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.footer-about {
+  flex: 1 1 250px;
+}
+
+.footer-about p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #f39c12;
+}
+
+.footer-contact p {
+  font-size: 0.9rem;
+  margin: 6px 0;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social .social-icons a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.footer-social .social-icons a:hover {
+  color: #f39c12;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  margin-top: 25px;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* RESPONSIVE STYLES   */
+/* added later */
+/*  Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar-left {
+    flex: 1;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 600px) {
+  .movie-card,
+  .concert-card,
+  .comedy-card,
+  .theatre-card {
+    width: 150px; /* smaller cards */
+  }
+
+  .movie-card img,
+  .concert-card img,
+  .comedy-card img,
+  .theatre-card img {
+    height: 220px;
+  }
+}
+@media (max-width: 768px) {
+  .video-banner {
+    height: 40vh;
+  }
+}
