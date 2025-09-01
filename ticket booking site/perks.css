@@ -1,0 +1,138 @@
+/* General reset + body */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  margin: 0;
+  background: #f2f2f2;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #3f0202da;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #ffcc00;
+  background: rgba(255,255,255,0.1);
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+
+/* Movie details container */
+.movie-container {
+  display: flex;
+  background: rgb(239, 206, 200);
+  margin: 30px auto;
+  width: 80%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.poster img {
+  width: 220px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.details {
+  margin-left: 25px;
+  flex: 1;
+}
+
+.details h2 {
+  margin-top: 0;
+  color: #222;
+}
+
+.tag {
+  font-weight: bold;
+  color: #555;
+}
+
+.desc {
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+/* Button */
+.book-btn {
+  padding: 10px 20px;
+  background: #e50914;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.book-btn:hover {
+  background: #b20710;
+}
+
+/* Showtimes section */
+.showtimes {
+  background: rgb(239, 206, 200);
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.showtimes h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.times-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.time-card {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.time-card:hover {
+  background: #ffe6e6;
+  border-color: #e50914;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #3f0202da;
+  color: white;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 13px;
+}
