@@ -1,17 +1,21 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: #f7f7f7;
-  color: #333;
+  background: #d1cccce6;  /* very light red-pink */
+  color: #333
 }
 
 header {
-  background: #1e1e1ef6; 
-  color: #c90000;
+  background: linear-gradient(90deg, #b7050e, #2b2828);
+  color: rgb(0, 0, 0);
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* shadow under navbar */
+  position: sticky; /* stays on top while scrolling */
+  top: 0;
+  z-index: 1000;
 }
 .logo {
   font-size: 24px;
@@ -69,6 +73,14 @@ nav a:hover {
   flex-wrap: wrap;
   gap: 15px;
 }
+
+.movie-card:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(229, 57, 53, 0.6); /* reddish glow */
+  transition: all 0.3s ease;
+}
+
 
 .movie-card {
   display: block;
