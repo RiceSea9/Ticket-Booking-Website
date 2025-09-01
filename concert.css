@@ -1,0 +1,117 @@
+/* ===== General Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #C8A2C8; /* Lilac */
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header {
+  background: linear-gradient(90deg, #ff0080, #7928ca);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffeb3b;
+  text-shadow: 0 0 10px #ffeb3b;
+}
+
+/* ===== Sections ===== */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  color: #ffeb3b;
+  text-shadow: 0 0 12px #ffeb3b;
+}
+
+.genre-section {
+  margin: 2rem 4%;
+}
+
+.genre-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ff4de3;
+  text-shadow: 0 0 10px #ff4de3;
+}
+
+/* ===== Concert Cards ===== */
+.concert-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.concert-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #333;
+}
+
+.concert-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.concert-info {
+  padding: 0.8rem;
+}
+
+.concert-info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.concert-info p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Hover effect like neon glow */
+.concert-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff0080, 0 0 40px #7928ca;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  background: #111;
+  color: #777;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+}
