@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: url(netflix.webp);
+ 
+  background-size: contain;
+  align-items: center;
+}
+  
+
+.login-container {
+  width: 350px;
+  padding: 40px;
+
+ 
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+ 
+
+}
+
+.login-container h2 {
+  color: white;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.login-container input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-container button:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+.login-container p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-container a {
+  color: #00c6ff;
+  text-decoration: none;
+}
+

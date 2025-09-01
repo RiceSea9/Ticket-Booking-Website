@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  background-image: url(dodooni.jpg),url(Mohabbatein.jpg),url(Brown_Rang_song.jpg),url(Taylor_Swift_-_Speak_Now_cover.png),url(netflix.webp);
+  background-position: left top,right top,left bottom, right bottom,center center;
+  background-repeat: no-repeat,no-repeat,no-repeat,no-repeat;
+    background-size: 40% 50%, 40% 50%, 40% 50%, 40% 50%,30% 100%;
+   
+ 
+}
+
+.form-container {
+  width: 350px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.form-container h2 {
+color: #393939;
+  margin-bottom: 25px;
+  font-size: 28px;
+ 
+}
+
+.form-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+color: #111;     
+  font-size: 16px;
+
+}
+.lola {
+  width: 90%;                /* make it stretch across form */
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #000000, #A855F7); /* gradient */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.lola:hover {
+  background: linear-gradient(135deg, #ff9a3c, #ff3366);
+  transform: scale(1.03);   /* slight zoom on hover */
+}
+
+.lola:active {
+  transform: scale(0.97);   /* click effect */
+}

@@ -1,0 +1,92 @@
+*{
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 0;
+   border:border-box;
+
+
+}
+.navbar{
+    height:60px;
+    background-color: #0f1111;
+    display: flex;
+}
+.nav-logo{
+    height: 50px;
+}
+.logo{
+    background-image: url("amazon_logo.png");
+    
+  background-repeat: no-repeat;
+  background-size: contain; /* or 'cover' if you want it to fill */
+  background-position: left;
+  height: 50px; /* Match this with .nav-logo if needed */
+  width: 100px;
+  
+}
+.border{
+  
+  padding: 6px 10px;
+  border-radius: 3px;
+
+}
+
+
+.border :hover{
+    border: 1.5px solid white;
+    cursor: pointer;
+}
+
+
+
+.addressz{
+    font-size: 0.85rem;
+    padding-left: 0.7rem;
+    color: #ccc;
+}
+.addresszz{
+    font-size: 1rem;
+    margin-left: 3px;
+}
+.gps{
+  
+    color: #fff;
+    display: flex;
+    align-items: center;
+   
+}
+.searchbar{
+    display: flex;
+    
+     width: 628px;
+     height: 40px;
+     border-radius: 4px;
+     padding-top: 10px;
+     
+     
+  
+}
+.search-icon{
+ 
+ background-color:#ffce12; 
+ color: #000000;
+ display: flex;
+ justify-content: center;
+ width: 50px;
+ align-items: center;
+ border-radius: 2px;
+ 
+
+}
+.HM{
+    height: 40px;
+    background-color: #f3f3f3;
+    border-radius: 4px;
+    width: 50px;
+    border: 3px;
+ text-align: center;
+ padding-top: 3px;
+       
+}
+.rohan{
+    width: 620px;
+}
