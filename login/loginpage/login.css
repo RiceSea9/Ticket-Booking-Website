@@ -8,26 +8,23 @@
 body {
   height: 100vh;
   display: flex;
-  justify-content: center;
-  background-image: url(netflix.webp);
- 
-  background-size: contain;
-  align-items: center;
+  justify-content: flex-end;   /* move login box to right */
+  align-items: center;         /* vertical center */
+  background-image: url("canva.jpg");
+  background-size: 1300px 650px;     /* fill background */
+  background-position: center; /* keep it centered */
+  background-repeat: no-repeat;
+  padding-right: 60px;         /* space from right edge */
 }
-  
 
 .login-container {
   width: 350px;
   padding: 40px;
-
- 
   border-radius: 15px;
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.2);
   text-align: center;
- 
-
 }
 
 .login-container h2 {

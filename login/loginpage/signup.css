@@ -10,11 +10,10 @@ body {
   display: flex;
   justify-content: center;  
   align-items: center;
-  background-image: url(dodooni.jpg),url(Mohabbatein.jpg),url(Brown_Rang_song.jpg),url(Taylor_Swift_-_Speak_Now_cover.png),url(netflix.webp);
+  
   background-position: left top,right top,left bottom, right bottom,center center;
   background-repeat: no-repeat,no-repeat,no-repeat,no-repeat;
-    background-size: 40% 50%, 40% 50%, 40% 50%, 40% 50%,30% 100%;
-   
+    background-size:  1300px 590px;
  
 }
 
