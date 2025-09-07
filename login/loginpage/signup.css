@@ -1,72 +1,71 @@
-* {
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  height: 100vh;
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'Poppins', sans-serif;
 }
 
-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;  
-  align-items: center;
-  
-  background-position: left top,right top,left bottom, right bottom,center center;
-  background-repeat: no-repeat,no-repeat,no-repeat,no-repeat;
-    background-size: 35% 50%, 35% 50%, 35% 50%, 35% 50%,30% 100%;
-   
- 
+.signup-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 320px;
 }
 
-.form-container {
-  width: 350px;
-  padding: 40px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  
-  border: 1px solid rgba(255, 255, 255, 0.2);
+.signup-form h2 {
+  color: #fff;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
-.form-container h2 {
-color: #393939;
-  margin-bottom: 25px;
-  font-size: 28px;
- 
-}
-
-.form-container input {
+.signup-form input,
+.signup-form button {
   width: 100%;
-  padding: 12px;
-  margin: 10px 0;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
   border: none;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.2);
-color: #111;     
-  font-size: 16px;
-
+  border-radius: 5px;
+  font-size: 1rem;
 }
-.lola {
-  width: 90%;                /* make it stretch across form */
-  padding: 12px;
-  margin-top: 15px;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #000000, #A855F7); /* gradient */
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
+
+.signup-form input {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.dob-label {
+  display: block;
+  margin-top: 0.5rem;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.signup-form button {
+  background: #ff0080;
+  color: #fff;
   cursor: pointer;
-  transition: 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
 }
 
-.lola:hover {
-  background: linear-gradient(135deg, #ff9a3c, #ff3366);
-  transform: scale(1.03);   /* slight zoom on hover */
+.signup-form button:hover {
+  background: #ff4de3;
 }
 
-.lola:active {
-  transform: scale(0.97);   /* click effect */
+.signin-link {
+  text-align: center;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #fff;
 }
+
+.signin-link a {
+  color: #ffeb3b;
+  text-decoration: none;
+}
+
+.signin-link a:hover {
+  text-decora
