@@ -2,12 +2,12 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   background: #d1cccce6;  /* very light red-pink */
-  color: #333
+  
 }
 
 header {
   background: linear-gradient(90deg, #b7050e, #2b2828);
-  color: rgb(0, 0, 0);
+  color: rgb(253, 250, 250);
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
@@ -17,15 +17,6 @@ header {
   top: 0;
   z-index: 1000;
 }
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: red;
-}
-
-.logo span {
-  color: black;
-}
 
 
 header h1 {
@@ -34,7 +25,7 @@ header h1 {
 }
 
 nav a {
-  color: #c90000;
+  color: #f9f9f9;
   text-decoration: none;
   margin-left: 15px;
   font-size: 14px;
