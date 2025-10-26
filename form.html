@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Form Validation Example</title>
+<style>
+.error { color: red; font-size: 0.9em; }
+input { display: block; margin-bottom: 5px; padding: 5px; }
+label { margin-top: 10px; display: block; }
+</style>
+</head>
+<body>
+<h2>Registration Form</h2>
+<form id="myForm" onsubmit="return validateForm()">
+<!-- Username -->
+<label>Username:</label>
+<input type="text" id="username" placeholder="Enter username">
+<span id="usernameError" class="error"></span>
+<!-- Email -->
+<label>Email:</label>
+<input type="text" id="email" placeholder="Enter email">
+<span id="emailError" class="error"></span>
+<!-- Password -->
+<label>Password:</label>
+<input type="password" id="password" placeholder="Enter password">
+<span id="passwordError" class="error"></span>
+<!-- Confirm Password -->
+
+<label>Confirm Password:</label>
+<input type="password" id="confirmPassword" placeholder="Confirm password">
+<span id="confirmPasswordError" class="error"></span>
+<!-- Age -->
+<label>Age (18-60):</label>
+<input type="text" id="age" placeholder="Enter age">
+<span id="ageError" class="error"></span>
+<br>
+<button type="submit">Register</button>
+</form>
+<script>
+function validateForm() {
+// Get values
+let username = document.getElementById("username").value.trim();
+let email = document.getElementById("email").value.trim();
+let password = document.getElementById("password").value;
+let confirmPassword = document.getElementById("confirmPassword").value;
+let age = document.getElementById("age").value.trim();
+// Error spans
+let usernameError = document.getElementById("usernameError");
+let emailError = document.getElementById("emailError");
+let passwordError = document.getElementById("passwordError");
+let confirmPasswordError = document.getElementById("confirmPasswordError");
+let ageError = document.getElementById("ageError");
+let isValid = true;
+// Username validation
+if (username === "") {
+usernameError.textContent = "Username is required";
+isValid = false;
+} else {
+usernameError.textContent = "";
+}
+// Email validation
+let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (email === "") {
+emailError.textContent = "Email is required";
+
+isValid = false;
+} else if (!emailPattern.test(email)) {
+emailError.textContent = "Enter a valid email";
+isValid = false;
+} else {
+emailError.textContent = "";
+}
+// Password validation
+let passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&]).{8,}$/;
+if (password === "") {
+passwordError.textContent = "Password is required";
+isValid = false;
+} else if (!passwordPattern.test(password)) {
+passwordError.textContent = "Password must be 8+ chars with letters, numbers &
+special chars";
+isValid = false;
+} else {
+passwordError.textContent = "";
+}
+// Confirm password validation
+if (confirmPassword === "") {
+confirmPasswordError.textContent = "Confirm password is required";
+isValid = false;
+} else if (password !== confirmPassword) {
+confirmPasswordError.textContent = "Passwords do not match";
+isValid = false;
+} else {
+confirmPasswordError.textContent = "";
+}
+// Age validation
+if (age === "") {
+ageError.textContent = "Age is required";
+isValid = false;
+} else if (isNaN(age) || age < 18 || age > 60) {
+ageError.textContent = "Enter a valid age between 18 and 60";
+isValid = false;
+} else {
+ageError.textContent = "";
+}
+
+return isValid; // Prevent form submission if false
+}
+</script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: #d1cccce6;  /* very light red-pink */
+  background: #f4f3f3f2;  /* very light red-pink */
   
 }
 
@@ -158,3 +158,51 @@ footer {
     flex: 1 1 100%; /* 1 card per row */
   }
 }
+
+
+
+
+/* Ensure dark-mode colors cover everything important */
+body.dark-mode {
+  background: #0f1112;
+  color: #efefef;
+}
+
+body.dark-mode header, body.dark-mode nav {
+  background: linear-gradient(90deg, #111, #4b0000);
+}
+
+body.dark-mode .movie-card {
+  background: #131313;
+  color: #f2f2f2;
+  box-shadow: 0 6px 18px rgba(131, 127, 127, 0.6);
+}
+
+body.dark-mode .movie-info h4 { color: #f7efef; }
+body.dark-mode .movie-search { border-color: #767373; box-shadow: 0 0 8px rgba(255,102,102,0.12); }
+
+/* Sidebar styles (already present earlier) keep but larger */
+.burger {
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 28px;
+}
+
+/* make the scroll bar subtle on desktop too */
+.movie-list { scrollbar-width: thin; scrollbar-color: rgba(0,0,0,0.2) transparent; }
+/* Dark mode color adjustments for titles */
+body.dark-mode .section-title,
+body.dark-mode .genre-title {
+  color: #fcf9f9; /* brighter red for better contrast */
+  border-left-color: #850303; /* for the genre title’s red strip */
+}
+
+/* optional: tweak footer contrast too */
+body.dark-mode footer {
+  background: #0c0c0c;
+  color: #c2bfbf;
+}
+
