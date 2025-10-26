@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="inception.css">
 </head>
 <body>
+  
   <header>
     <h1>🎟 Tickets next door</h1>
     <nav>
@@ -14,6 +15,7 @@
       <a href="#">Bookings</a>
       <a href="#">Contact</a>
     </nav>
+      <button id="toggle-theme">🌙</button>
   </header>
 
   <main class="movie-container">
@@ -46,6 +48,7 @@
     </div>
   </section>
 
+  
 <div class="reviews">
   <h3>⭐ Audience Reviews</h3>
   
@@ -111,5 +114,25 @@
   <footer>
     <p>© 2025 MovieWorld | All Rights Reserved</p>
   </footer>
+
+  
+  <!-- ⭐ Seat Selection Popup -->
+  <div id="seatPopup" class="seat-popup">
+    <div class="seat-content">
+      <span class="close-btn">&times;</span>
+      <h2>🎟 Select Your Seats</h2>
+
+      <div class="screen">SCREEN</div>
+      <div class="seats-grid"></div>
+
+      <div class="ticket-info">
+        <p>Selected Seats: <span id="selectedCount">0</span></p>
+        <p>Total Price: ₹<span id="totalPrice">0</span></p>
+      </div>
+
+      <button id="confirmBooking" class="confirm-btn">Confirm Booking</button>
+    </div>
+  </div>
+  <script src="inception.js"></script>
 </body>
 </html>
