@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TicketNextDoor</title>
     <link rel="icon" type="image/png" href="./moviesfrontpage/ticketfavicon.png">
     <link rel="stylesheet" href="new.css">
 </head>
 <body>
+ 
     <nav class="navbar">
   <div class="navbar-left">
     <div class="logo">🎟️Ticket<span>Next</span>Door</div>
     <ul class="nav-links">
-      <li><a href="./ticket booking site/movies.html">Movies</a></li>
-      <li><a href="./concert.html">Concerts</a></li>
-      <li><a href="./ticket booking site/comedy.html">Comedy shows</a></li>
-      
+      <li><a href="#">Movies</a></li>
+      <li><a href="#">Concerts</a></li>
+      <li><a href="#">Comedy shows</a></li>
+      <li><a href="#">Theatre shows</a></li>
     </ul>
   </div>
   <div class="navbar-right">
@@ -27,22 +28,30 @@
         <option>Bangalore</option>
         <option>Jaipur</option>
       </select>
-    <button class="sign-in-btn"><a href="./login/loginpage/login.html">Log in</a></button>
-    <button class="sign-in-btn"><a href="./login/loginpage/signup.html">Signup</a></button>
+      <button id="theme-toggle" class="sign-in-btn">🌙 Dark Mode</button>
+    <button class="sign-in-btn">Log in</button>
+    <button class="sign-in-btn">Sign up</button>
   </div>
 </nav>
-<div class="video-banner">
-<iframe  
-src="https://www.youtube.com/embed/BjkIOU5PhyQ?si=9r9meLPOvm21PFDA&amp;controls=0&mute=1&loop=1" 
-title="YouTube video player"
- frameborder="0" 
- allow=" autoplay;encrypted-media; " 
-allowfullscreen>
+<!-- Sliding Promo Banner Section  -->
+<section class="promo-section">
+  <div class="promo-container">
+    <div class="promo-card">
+      <img src="./moviesfrontpage/bannerimage1.jpg" alt="Flash Sale">
+    </div>
+    <div class="promo-card">
+      <img src="./moviesfrontpage/bannerimage2.avif" alt="Bookmyshowcard">
+    </div>
+    <div class="promo-card">
+      <img src="./moviesfrontpage/bannerimage3.jpg" alt="Bookmyshowcard2">
+    </div>
+    <div class="promo-card">
+      <img src="./moviesfrontpage/bannerimage4.png" alt="Anuvjain">
+    </div>
+  </div>
+</section>
 
-</iframe>
-  
-</div>
-
+<!-- second normal html+css container -->
 <div class="container">
         <img src="./moviesfrontpage/badguys!.avif">
         <img src="./moviesfrontpage/f1!.jpg">
@@ -106,6 +115,7 @@ allowfullscreen>
        alt="Promo Banner" 
        class="banner-image">
 </div>
+
 <!-- concert container -->
 <div class="movie-section">
   <h2>Upcoming Concerts</h2>
@@ -139,7 +149,7 @@ allowfullscreen>
     </div>
   
   <div class="movie-card">
-      <img src="./moviesfrontpage/taylorsiftsavedpic.jpg" alt="Taylor swift Live">
+      <img src="./moviesfrontpage/taylorswiftnew.jpg" alt="Taylor swift Live">
       <div class="movie-info">
         <h3>Taylor swift – Eras Tour</h3>
         <p class="genre">Pop/Rock/Romantic</p>
@@ -154,6 +164,7 @@ allowfullscreen>
        class="banner-image">
 </div>
 
+<!-- Comedy Section -->
 <section class="movie-section">
   <h2>Stand-up Comedy</h2>
   <div class="movie-container">
@@ -200,6 +211,19 @@ allowfullscreen>
   </div>
 </section>
 
+
+<section id="user-section">
+  <h2>Registered Users</h2>
+  <form id="userform">
+    <input type="text" id="name" placeholder="Enter name" required>
+    <input type="number" id="age" placeholder="Enter age" required>
+    <input type="email" id="email" placeholder="Enter email" required>
+    <button type="submit">Add User</button>
+  </form>
+  <div id="userList"></div>
+</section>
+
+
 <footer>
   <p>© 2025 TicketNextDoor All Rights Reserved.</p>
   <p>Your one-stop destination for Movies, Concerts, Comedy, and Theatre shows. Book tickets easily and enjoy your favorite events!</p>
@@ -212,9 +236,9 @@ allowfullscreen>
   <p>
     <a href="aboutus.html">About Us</a> 
     Email: support@ticketnextdoor.com
-    Phone: +91 98765 43210
+    Phone: +91 87965 67854
   </p>
 </footer>
-
+ <script src="script.js"></script>
 </body>
 </html>
