@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: url('concert-bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Center box */
+.signup-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center inner form */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* Form */
+.signup-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers input & button */
+}
+
+/* Text + Inputs */
+.signup-form h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.signup-form input,
+.signup-form button {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.signup-form input {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.dob-label {
+  display: block;
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.signup-form button {
+  background: #ff0080;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signup-form button:hover {
+  background: #ff4de3;
+}
+
+/* Bottom link */
+.signin-link {
+  text-align: center;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.signin-link a {
+  color: #ffeb3b;
+  text-decoration: none;
+}
