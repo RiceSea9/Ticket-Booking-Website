@@ -1,51 +1,35 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const loginForm = document.getElementById('loginForm');
+document.addEventListener("DOMContentLoaded", () => {
+  const loginForm = document.getElementById("loginForm");
 
-  loginForm.addEventListener('submit', function (e) {
+  loginForm.addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    const email = document.getElementById('loginEmail').value.trim();
-    const password = document.getElementById('loginPassword').value.trim();
+    const email = document.getElementById("loginEmail").value.trim();
+    const password = document.getElementById("loginPassword").value.trim();
 
-    // ⚡ Validation 1: Empty fields
     if (!email || !password) {
-      alert("⚠️ Please enter both email and password!");
+      alert("Please fill in all fields.");
       return;
     }
 
-    // ⚡ Validation 2: Email format
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-      alert("📧 Please enter a valid email address!");
-      return;
-    }
+    try {
+      // ✅ Fetch users from JSON Server
+      const response = await fetch("http://localhost:3000/users");
+      const users = await response.json();
 
-    // ⚡ Check user in localStorage
-    const storedUser = localStorage.getItem(email);
+      // ✅ Find user by email
+      const user = users.find(u => u.email === email && u.password === password);
 
-    if (!storedUser) {
-      alert("❌ No account found! Please sign up first.");
-      window.location.href = "signup.html";
-      return;
-    }
-
-    const userData = JSON.parse(storedUser);
-
-    // ⚡ Check password
-    if (userData.password === password) {
-      alert(`🎉 Welcome back, ${userData.name}!`);
-      
-      // ✅ Save login session
-      sessionStorage.setItem("loggedInUser", email);
-
-      // ✅ Redirect to home page
-      window.location.href = "new.html";
-    } else {
-      alert("🔒 Incorrect password! Please try again.");
+      if (user) {
+        alert(`Welcome back, ${user.name}! 🎉`);
+        sessionStorage.setItem("loggedInUser", JSON.stringify(user));
+        window.location.href = "new.html"; // ✅ Redirect to homepage
+      } else {
+        alert("Incorrect email or password.");
+      }
+    } catch (error) {
+      console.error("Error connecting to API:", error);
+      alert("Server error. Please try again later.");
     }
   });
 });
-
-
-
-

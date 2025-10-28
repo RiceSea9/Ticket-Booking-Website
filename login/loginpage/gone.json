@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Rohan",
+      "email": "rohan@gmail.com",
+      "password": "12345",
+      "dob": "2004-05-10"
+    },
+    {
+      "id": "c30c",
+      "name": "Navjot",
+      "email": "navv10@gmail.com",
+      "password": "Tikshu",
+      "dob": "2002-01-02"
+    },
+    {
+      "id": "58bd",
+      "name": "Navjot",
+      "email": "Snake10@gmail.com",
+      "password": "Misni@10",
+      "dob": "1990-01-10"
+    }
+  ]
+}

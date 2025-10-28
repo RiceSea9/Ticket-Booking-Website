@@ -15,62 +15,71 @@ setInterval(() => {
 }, 5000);
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const signupForm = document.querySelector('.signup-form');
+document.addEventListener("DOMContentLoaded", () => {
+  const signupForm = document.querySelector(".signup-form");
 
-  signupForm.addEventListener('submit', function (e) {
+  if (!signupForm) {
+    console.error("Signup form not found!");
+    return;
+  }
+
+  signupForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const name = signupForm.querySelector('input[placeholder="Full Name"]').value.trim();
-    const email = signupForm.querySelector('input[placeholder="Email"]').value.trim();
-    const password = signupForm.querySelector('input[placeholder="Password"]').value.trim();
-    const dob = document.getElementById('dob').value;
+    // ✅ Get form values
+    const name = signupForm.querySelector("input[placeholder='Full Name']").value.trim();
+    const email = signupForm.querySelector("input[placeholder='Email']").value.trim();
+    const password = signupForm.querySelector("input[placeholder='Password']").value.trim();
+    const dob = signupForm.querySelector("#dob").value.trim();
 
-    // ⚡ Validation 1: Check all fields
+    // ✅ Basic validation
     if (!name || !email || !password || !dob) {
-      alert("⚠️ Please fill all fields!");
+      alert("Please fill in all fields!");
       return;
     }
 
-    // ⚡ Validation 2: Valid email format
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
-      alert("📧 Please enter a valid email address!");
+      alert("Please enter a valid email address!");
       return;
     }
 
-    // ⚡ Validation 3: Password length
     if (password.length < 6) {
-      alert("🔒 Password must be at least 6 characters long!");
+      alert("Password must be at least 6 characters long!");
       return;
     }
 
-    // ⚡ Validation 4: Age check (must be 13+ for this site)
-    const birthDate = new Date(dob);
-    const today = new Date();
-    let age = today.getFullYear() - birthDate.getFullYear();
-    const monthDiff = today.getMonth() - birthDate.getMonth();
-    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-      age--;
+    try {
+      // ✅ Check existing users
+      const res = await fetch("http://localhost:3000/users");
+      const users = await res.json();
+
+      const userExists = users.some(user => user.email === email);
+      if (userExists) {
+        alert("User already exists! Please log in instead.");
+        window.location.href = "login.html"; // redirect to login
+        return;
+      }
+
+      // ✅ Create new user
+      const newUser = { name, email, password, dob };
+
+      const addRes = await fetch("http://localhost:3000/users", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newUser)
+      });
+
+      if (addRes.ok) {
+        alert("Account created successfully! Redirecting to login...");
+        signupForm.reset();
+        window.location.href = "login.html"; // ✅ redirect to login page
+      } else {
+        alert("Failed to create account. Please try again.");
+      }
+    } catch (err) {
+      console.error("Error:", err);
+      alert("Server error! Please try again later.");
     }
-
-    if (age < 13) {
-      alert("🎟️ You must be at least 13 years old to join Ticket Next Door!");
-      return;
-    }
-
-    // ⚡ Validation 5: Prevent duplicate signup
-    if (localStorage.getItem(email)) {
-      alert("⚠️ This email is already registered. Please log in instead.");
-      window.location.href = "login.html";
-      return;
-    }
-
-    // ✅ Save user data locally
-    const userData = { name, email, password, dob, age };
-    localStorage.setItem(email, JSON.stringify(userData));
-
-    alert(`✅ Welcome to Ticket Next Door, ${name}! Your account has been created successfully.`);
-    window.location.href = "login.html";
   });
 });
