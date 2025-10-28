@@ -1,72 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Ticket Next Door</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about TicketnextDoor - Your one-stop destination for booking tickets to movies, comedy shows, concerts, and theatre performances.">
+  <title>About Us - TicketnextDoor</title>
+  <link rel="stylesheet" href="aboutUS.css">
 </head>
+
 <body>
-  
-  <!-- Header Section -->
-  <header class="navbar">
-    <div class="navbar-left">
-      <div class="logo">🎟Ticket<span>next</span>Door</div>
-      <nav class="nav-links">
-        <a href="./ticket booking site/movies.html">Movies</a>
-        <a href="./ticket booking site/comedy.html">Comedy Shows</a>
-        <a href="./concert.html">Concerts</a>
-      </nav>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        🎟️ <span class="logo-ticket">Ticket</span><span class="logo-next">next</span><span class="logo-door">Door</span>
+      </div>
+      <div class="nav-links">
+        <a href="#movies">Movies</a>
+        <a href="#theatre">Theatre</a>
+        <a href="#comedy">Comedy</a>
+        <a href="#concerts">Concerts</a>
+        <a href="aboutUS.html" class="active">About</a>
+      </div>
+      <button id="theme-toggle" class="theme-toggle"><span id="theme-icon">🌙</span></button>
     </div>
-  </header>
+  </nav>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="about-1">
-      <h1>ABOUT US</h1>
-      <p>
-        Welcome to <strong>Ticket Next Door</strong> – your one-stop destination for unforgettable experiences!  
-        We are a passionate team of movie buffs, music lovers, and comedy fans who believe that entertainment should be just a click away.  
-        Our purpose is simple: to make booking your favorite <em>movies, concerts, and comedy shows</em> smooth, quick, and hassle-free.  
-        With us, you don’t just book a ticket – you book memories, laughter, and magical moments.  
-        Join us, because life is too short for boring weekends!
-      </p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container center">
+      <h1>About <span class="highlight">Us</span></h1>
+      <p>Bringing entertainment closer to you, one ticket at a time.</p>
     </div>
+  </section>
 
-    <div class="about-2">
-      <div class="about-item">
-        <h3>🎯 Our Mission</h3>
-        <p>
-          At <strong>Ticket Next Door</strong>, our mission is to bring people closer to the world of entertainment.  
-          We aim to make every movie, concert, and comedy show accessible at your fingertips with just a few simple clicks.  
-          Our goal is not only to provide a seamless ticket booking experience but also to create a platform where laughter, music, and stories unite communities.
-        </p>
+  <!-- Our Story -->
+  <section class="story">
+    <div class="container grid">
+      <div>
+        <h2>Our Story</h2>
+        <p>TicketnextDoor was born from the frustration of complicated ticket booking. Our founders wanted a simple way to connect people with entertainment.</p>
+        <p>Launched in 2024, our platform helps thousands discover and attend events — movies, comedy shows, concerts, and theatre performances.</p>
       </div>
+      <div class="card accent">
+        <div class="icon">🎭</div>
+        <h3>Why We Exist</h3>
+        <p>To bridge the gap between amazing experiences and the people who seek them — accessible, affordable, unforgettable.</p>
+      </div>
+    </div>
+  </section>
 
-      <div class="about-item">
-        <h3>🌍 Our Vision</h3>
-        <p>
-          Our vision is to become the most trusted and loved destination for entertainment enthusiasts.  
-          We aspire to transform the way people experience movies, music, and comedy by offering a platform that is simple, reliable, and full of possibilities.  
-          With innovation and passion at our core, we aim to make every event a memory to cherish.
-        </p>
+  <!-- Mission & Vision -->
+  <section class="mv">
+    <div class="container grid">
+      <div class="card red">
+        <div class="icon">🎯</div>
+        <h3>Our Mission</h3>
+        <p>To revolutionize entertainment ticketing with a seamless, secure, and user-friendly platform connecting millions to joy.</p>
       </div>
+      <div class="card green">
+        <div class="icon">🌟</div>
+        <h3>Our Vision</h3>
+        <p>To be the world’s most trusted entertainment platform — making event discovery effortless and enriching for everyone.</p>
+      </div>
+    </div>
+  </section>
 
-      <div class="about-item">
-        <h3>🤝 Why Choose Us?</h3>
-        <p>
-          We’re more than just a booking platform – we’re your partner in creating memories.  
-          With secure payments, easy cancellations, and 24/7 support, we ensure that your journey to entertainment is smooth and worry-free.  
-          Because at <strong>Ticket Next Door</strong>, your happiness is our priority.
-        </p>
-      </div>
+  <!-- Contact -->
+  <section class="contact">
+    <div class="container center">
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you</p>
+
+      <form id="contact-form" class="form">
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+        <textarea id="message" name="message" placeholder="Your message" rows="4" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+        <p id="form-success" class="success hidden">✓ Message sent! We'll get back to you soon.</p>
+      </form>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>Copyright &copy; 2025 | Ticket Next Door. All rights reserved.</p>
+    <p>© 2025 TicketnextDoor. All rights reserved.</p>
   </footer>
 
+  <script src="script1.js"></script>
 </body>
 </html>
