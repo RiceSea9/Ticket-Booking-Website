@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "0494",
+      "name": "Navjot Kaur",
+      "age": "20",
+      "email": "navjotkaur@gmail.com"
+    },
+    {
+      "id": "9ceb",
+      "name": "Pranjal Kapoor",
+      "age": "19",
+      "email": "pranjalkapoor@gmail.com"
+    },
+    {
+      "id": "f252",
+      "name": "Rohan Sharma",
+      "age": "19",
+      "email": "rohansharma@gmail.com"
+    },
+    {
+      "id": "4324",
+      "name": "Sanjami Malhotra",
+      "age": "20",
+      "email": "malhotrasanjami@gmail.com"
+    }
+  ]
+}

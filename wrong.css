@@ -1,0 +1,494 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+
+
+/* navbar css over the video  */
+/* the top */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 20px;
+  background-color: #fff;
+  border-bottom: 3px solid red;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
+}
+
+.logo span {
+  color: black;
+}
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-right input[type="text"]{
+width: 250px;
+padding: 8px 12px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 10px;
+  font-weight: 500;
+  
+}
+.nav-links {
+  list-style: none;   /* removes the black dots */
+  display: flex;      /* makes the list horizontal */
+  gap: 20px;          /* spacing between items */
+  margin: 0;
+  padding: 0;
+}
+.nav-links li {
+  list-style: none;   /* just in case */
+}
+
+
+.nav-links a:hover {
+  color: #e74c3c;
+}
+
+.search-bar {
+  padding: 5px 30px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.city-select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: black;
+}
+
+.sign-in-btn {
+  padding: 10px 15px;
+  background-color:red ;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* under the navbar body */
+body{
+    background-color: black;
+    
+}
+
+/* video banner the banner which shows the video  */
+.video-banner{
+    position:relative;
+    width: 100%;
+    height:70vh;
+    overflow: hidden;
+}
+
+.video-banner iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid red; */
+}
+
+
+/* slide function which is in the middle after the trailer showcase*/
+.container{
+    margin: 40px auto;
+    padding:20px;
+    width: 70%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    max-width: 90%;
+    
+} 
+.container::-webkit-scrollbar {
+  display: none;
+}
+.container img{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all ease-in-out 0.5s;
+}
+.container img:hover{
+    transform: scale(1.15);
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+/* movie container which has all the movies */
+.movie-section{
+    margin:60px auto;
+    max-width: 90%;
+}
+.movie-section h2{
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: white;
+}
+.movie-container{
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.movie-container::-webkit-scrollbar {
+  display: none; /* hide scrollbar */
+}
+.movie-card {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  flex: 1 1 auto;
+  max-width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 16px rgba(0,0,0,0.5);
+}
+.movie-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+.movie-info {
+  padding: 10px;
+  text-align: left;
+}
+
+.movie-info h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.genre {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 5px;
+}
+
+.rating {
+  font-size: 13px;
+  color: #ff4c4c;
+}
+
+.rating span {
+  color: #ddd;
+  font-size: 12px;
+}
+
+/* banner under concert and movie  */
+.banner-container {
+  width: 100%;             
+  display: flex;            
+  justify-content: flex-start; 
+  margin: 1.5rem 0;        
+}
+
+.banner-image {
+  width: 90%;             
+  height: 10rem;          
+  object-fit: cover;       
+  border-radius: 0.5rem;   
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+/* smaller footer than before */
+footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 5 px;
+}
+
+footer a {
+  color: #e25b0d;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+
+/* responsiveness */
+.menu-icon{
+    display: none;
+}
+
+@media(max-width:768px){
+    .nav-links{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .movie-card img{
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+  .navbar-right input,
+  .navbar-right select {
+    width: 100%; /* stretch on small screen */
+    margin-top: 10px;
+  }
+  .movie-card {
+    max-width: 150px;
+  }
+}
+
+
+
+/* Dark/light mode toggle */
+/* 🌞 Light mode styles */
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+
+body.light-mode .navbar {
+  background-color: #f1f1f1;
+  border-bottom: 3px solid #e25b0d;
+}
+
+body.light-mode .nav-links a {
+  color: #333;
+}
+
+body.light-mode .movie-section h2 {
+  color: black;
+}
+
+body.light-mode .movie-card {
+  background-color: #f7f7f7;
+}
+
+body.light-mode .movie-info h3 {
+  color: black;
+}
+
+body.light-mode footer {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+
+/* 🎥 Scrolling promo section (like BookMyShow banners) */
+/* 🎥 Scrolling promo section */
+.promo-section {
+  width: 100%;
+  background-color: var(--banner-bg, #fff);
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.promo-container {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0 20px;
+  max-width: 95%;
+}
+
+.promo-container::-webkit-scrollbar {
+  display: none;
+}
+
+.promo-card {
+  flex: 0 0 auto;
+  width: 360px;      /* increased width */
+  height: 200px;     /* increased height */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.promo-card:hover {
+  transform: scale(1.05);
+}
+
+.promo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* new section before footer to store dummy users */
+#user-section {
+  padding: 20px;
+  background-color: #111;
+  color: white;
+  border-top: 2px solid #444;
+}
+
+#userList .user {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #222;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+body.light-mode #user-section {
+    background-color: #f7f7f7;
+    color: black;
+    border-top: 2px solid #ccc;
+}
+
+body.light-mode #userList .user {
+    background-color: #e0e0e0;
+    color: black;
+}
+
+body.light-mode #userList .user button {
+    background-color: red; /* or a color that looks good on light mode */
+    color: white;
+}
+
+
+/* NEW */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Arial", sans-serif; }
+
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 25px 20px; background-color: #fff; border-bottom: 3px solid red; position: sticky; top: 0; z-index: 999; }
+.logo { font-size: 24px; font-weight: bold; color: red; }
+.logo span { color: black; }
+.navbar-left, .navbar-right { display: flex; align-items: center; gap: 15px; }
+.navbar-right input[type="text"] { width: 250px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; }
+.nav-links { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+.nav-links a { text-decoration: none; color: #333; margin: 0 10px; font-weight: 500; }
+.nav-links a:hover { color: #e74c3c; }
+.search-bar { padding: 5px 30px; border-radius: 5px; border: 1px solid #ccc; }
+.city-select { padding: 10px; border-radius: 5px; border: 1px solid #ccc; background-color: white; color: black; }
+.sign-in-btn { padding: 10px 15px; background-color: red; color: white; border: none; border-radius: 5px; cursor: pointer; }
+
+body { background-color: black; }
+
+.video-banner { position: relative; width: 100%; height: 70vh; overflow: hidden; }
+.video-banner iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.container { margin: 40px auto; padding: 20px; width: 70%; height: 300px; display: flex; justify-content: center; gap: 20px; overflow-x: auto; scroll-behavior: smooth; max-width: 90%; }
+.container::-webkit-scrollbar { display: none; }
+.container img { width: 200px; height: 300px; object-fit: cover; border-radius: 10px; transition: all ease-in-out 0.5s; }
+.container img:hover { transform: scale(1.15); box-shadow: 0px 8px 16px rgba(0,0,0,0.5); z-index: 10; }
+
+.movie-section { margin: 60px auto; max-width: 90%; }
+.movie-section h2 { margin-bottom: 20px; font-size: 22px; color: white; }
+.movie-container { display: flex; gap: 20px; overflow-x: auto; scroll-behavior: smooth; padding-bottom: 10px; }
+.movie-container::-webkit-scrollbar { display: none; }
+.movie-card { background-color: #1c1c1c; border-radius: 10px; overflow: hidden; width: 100%; flex: 1 1 auto; max-width: 200px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.movie-card:hover { transform: scale(1.05); box-shadow: 0px 6px 16px rgba(0,0,0,0.5); }
+.movie-card img { width: 100%; height: 280px; object-fit: cover; }
+.movie-info { padding: 10px; text-align: left; }
+.movie-info h3 { font-size: 16px; margin-bottom: 5px; color: white; }
+.genre { font-size: 13px; color: #aaa; margin-bottom: 5px; }
+.rating { font-size: 13px; color: #ff4c4c; }
+.rating span { color: #ddd; font-size: 12px; }
+
+.banner-container { width: 100%; display: flex; justify-content: flex-start; margin: 1.5rem 0; }
+.banner-image { width: 90%; height: 10rem; object-fit: cover; border-radius: 0.5rem; box-shadow: 0 10px 15px rgba(0,0,0,0.3); }
+
+footer { background: #111; color: #ccc; text-align: center; padding: 20px; margin-top: 40px; font-size: 5px; }
+footer a { color: #e25b0d; text-decoration: none; margin: 0 8px; }
+
+.menu-icon { display: none; }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .menu-icon { display: block; }
+  .movie-card img { height: 220px; }
+}
+
+@media (max-width: 480px) {
+  .navbar-right input, .navbar-right select { width: 100%; margin-top: 10px; }
+  .movie-card { max-width: 150px; }
+}
+
+body.light-mode { background-color: white; color: black; }
+body.light-mode .navbar { background-color: #f1f1f1; border-bottom: 3px solid #e25b0d; }
+body.light-mode .nav-links a { color: #333; }
+body.light-mode .movie-section h2 { color: black; }
+body.light-mode .movie-card { background-color: #f7f7f7; }
+body.light-mode .movie-info h3 { color: black; }
+body.light-mode footer { background-color: #f1f1f1; color: #333; }
+
+.promo-section { width: 100%; background-color: var(--banner-bg, #fff); padding: 30px 0; display: flex; justify-content: center; align-items: center; transition: background-color 0.3s ease; }
+.promo-container { display: flex; gap: 25px; overflow-x: auto; scroll-behavior: smooth; padding: 0 20px; max-width: 95%; }
+.promo-container::-webkit-scrollbar { display: none; }
+.promo-card { flex: 0 0 auto; width: 360px; height: 200px; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: transform 0.3s ease; }
+.promo-card:hover { transform: scale(1.05); }
+.promo-card img { width: 100%; height: 100%; object-fit: cover; }
+
+#user-section { padding: 20px; background-color: #111; color: white; border-top: 2px solid #444; }
+#userList .user { margin-top: 10px; display: flex; justify-content: space-between; background-color: #222; padding: 8px 12px; border-radius: 6px; }
+
+body.light-mode #user-section { background-color: #f7f7f7; color: black; border-top: 2px solid #ccc; }
+body.light-mode #userList .user { background-color: #e0e0e0; color: black; }
+body.light-mode #userList .user button { background-color: red; color: white; }
+
+#user-section h2 { font-size: 22px; margin-bottom: 10px; text-align: center; color: #ff4c4c; }
+#userform { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+#userform input { padding: 8px 10px; border: 1px solid #444; border-radius: 5px; background-color: #222; color: white; }
+#userform button { padding: 8px 14px; border: none; border-radius: 5px; background-color: red; color: white; cursor: pointer; transition: 0.3s; }
+#userform button:hover { background-color: #ff6a6a; }
+
+#userList { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+.user { display: flex; justify-content: space-between; align-items: center; background-color: #1a1a1a; padding: 10px 15px; border-radius: 5px; }
+.user:hover { background-color: #2a2a2a; }
+
+.user-info { display: flex; flex-direction: column; gap: 3px; }
+.user-info strong { color: #ff4c4c; font-size: 16px; }
+.user-info span { font-size: 13px; color: #ccc; }
+
+.delete-btn { background-color: #ff3333; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; color: white; transition: 0.3s; }
+.delete-btn:hover { background-color: #ff6666; }
+
+body.light-mode #userform input { background-color: #fff; border: 1px solid #ccc; color: black; }
+body.light-mode .user { background-color: #eaeaea; }
+body.light-mode .user:hover { background-color: #dedede; }
+body.light-mode .user-info span { color: #555; }
