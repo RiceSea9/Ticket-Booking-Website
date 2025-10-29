@@ -1,0 +1,65 @@
+{
+  "values": [
+    {
+      "icon": "🎯",
+      "title": "Our Mission",
+      "description": "To make booking for movies, concerts, and shows seamless, fast, and enjoyable."
+    },
+    {
+      "icon": "💡",
+      "title": "Our Vision",
+      "description": "To be the most trusted platform for event bookings and entertainment discovery."
+    },
+    {
+      "icon": "🤝",
+      "title": "Customer First",
+      "description": "We put our users at the center of every decision and continuously improve based on feedback."
+    },
+    {
+      "icon": "🚀",
+      "title": "Innovation",
+      "description": "We embrace creativity and technology to deliver unique user experiences."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How can I book a movie ticket?",
+      "answer": "Simply log in, choose your movie, select the showtime, and confirm payment through our secure gateway."
+    },
+    {
+      "question": "Can I cancel my booking?",
+      "answer": "Yes, you can cancel your booking before the show starts. A small cancellation fee may apply depending on the venue’s policy."
+    },
+    {
+      "question": "Are my payments secure?",
+      "answer": "Absolutely! We use industry-grade encryption and trusted payment partners to ensure your data is safe."
+    },
+    {
+      "question": "Do I need to create an account to book tickets?",
+      "answer": "Creating an account helps you manage your bookings and get personalized recommendations, but guest checkout is also available."
+    }
+  ],
+  "messages": [
+    {
+      "id": "77c3",
+      "name": "pranjal",
+      "email": "hello10@gmail.com",
+      "message": "How to stay away from the short bitches?",
+      "timestamp": "2025-10-28T04:27:31.450Z"
+    },
+    {
+      "id": "00c4",
+      "name": "pranjal",
+      "email": "djbhjd@gmail.com",
+      "message": "love this site",
+      "timestamp": "2025-10-28T04:28:48.159Z"
+    },
+    {
+      "id": "4a84",
+      "name": "grey",
+      "email": "pranjalkapoor9y@gmail.com",
+      "message": "fwerewtgkimiu",
+      "timestamp": "2025-10-28T04:30:03.637Z"
+    }
+  ]
+}
